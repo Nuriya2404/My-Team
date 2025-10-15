@@ -1,0 +1,39 @@
+.build-section {
+    background-color:  #012F34;
+    padding: 150px 0;
+    background-image: url("../../images/build-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 100px 244px;
+}
+.build {
+    @include Display($items:center, $justify:space-between, $gap);
+    // display: flex;
+    // justify-content: space-between;
+}
+.build__title-wrapper {
+    width: 445px;
+}
+.build__text-line {
+    margin-bottom: 54px;
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background-color: $clr-pink;
+}
+.build__title {
+    @include TextStyle($FW: 700, $FS: 48px, $LH: 48px, $LS: 0px, $CLR: $clr-white);
+}
+.build__item {
+    @include Display($items:center, $justify:space-between, $gap:23px);
+}
+.build__content {
+    margin-bottom: 32px;
+}
+.build__heading {
+    @include TextStyle($FW: 700, $FS: 18px, $LH: 28px, $LS: 0px, $CLR: $clr-pink);
+}
+.build__text {
+    @include TextStyle($FW: 600, $FS: 15px, $LH: 25px, $LS: 0px, $CLR: $clr-white);
+    width: 445px;
+}
