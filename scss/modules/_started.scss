@@ -1,0 +1,48 @@
+.started-section {
+    @include Bg($Url:"../images/group-bg1.svg",$Size:200px 244px,$Position:right bottom);
+    padding: 76px 0;
+    background-color: $clr-pink;
+}
+.started {
+    @include Display($items: center, $justify: space-between, $gap: 260px);
+}
+.started__title-wrapper {
+    @include Display($items: center, $justify: space-between, $gap: 0px);
+}
+.started__title {
+    @include TextStyle($FW: 700, $FS: 48px, $LH: 48px, $LS: 0px, $CLR: $bg-section);
+}
+.started__btn {
+    @include TextStyle($FW: 600, $FS: 18px, $LH: 28px, $LS: 0px, $CLR: $bg-section);
+    @include BtnStyle($BC:$bg-section, $P: 9px 32px);
+    border: 2px solid $bg-section;
+    border-radius: 40px;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $bg-section;
+        color: $clr-pink;
+    }
+}
+@media (max-width: 992px) {
+.started-section {
+    padding: 60px 0;
+}
+.started__title-wrapper {
+      @include Display($items: center, $justify: center);
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+}
+.started__title {
+      @include TextStyle($FW: 700, $FS: 36px, $LH: 42px, $CLR: $bg-section);
+}
+.started__btn {
+      @include TextStyle($FW: 600, $FS: 16px, $LH: 26px, $CLR: $bg-section);
+      @include BtnStyle($BC: transparent, $P: 8px 28px);
+      border: 35px;
+      border-radius: 2px solid $bg-section;
+}
+}
